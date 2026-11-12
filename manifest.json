@@ -2,9 +2,9 @@
     "name": "Extension test",
     "description": "This is a test extension",
     "version": "1.0",
-    "manifest_version": 1,
+    "manifest_version": 3,
     "author": "Spiral-cloud",
-    "actions": {
-        "default_popup": "popup.html"
+    "action": {
+        "default_popup": "hello.html"
     }
 }
