@@ -1,0 +1,23 @@
+
+
+article,
+main,
+[role="main"],
+body {
+    display:block !important;
+    max-width: 700px !important;
+  margin: 0 auto !important;
+  padding: 24px !important;
+  background: white !important;
+  visibility: visible !important;
+}
+
+article,
+main,
+[role="main"] {
+  display: block !important;
+  max-width: 700px !important;
+  margin: 0 auto !important;
+  padding: 24px !important;
+  background: white !important;
+}
