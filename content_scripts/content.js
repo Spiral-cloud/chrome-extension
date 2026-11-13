@@ -43,3 +43,22 @@ function renderReadingTime(article)
     (dateElement ?? heading)?.insertAdjacentElement("afterend", badge);
 }
 renderReadingTime(document.querySelector('article'));
+
+const  observer = new MutationObserver((mutationsList) => 
+    {
+        for (const mutation of mutationsList)
+            {
+                for (const addedNode of mutation.addedNodes)
+                {
+                    if (addedNode.nodeType === Node.TagName('article')) 
+                    {
+                        renderReadingTime(addedNode);
+                    }
+                }
+            }
+
+    });
+observer.observe(document.querySelector('devsite-content'),
+{
+    childList: true,
+});
