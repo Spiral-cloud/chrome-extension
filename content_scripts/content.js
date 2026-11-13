@@ -23,3 +23,23 @@
 
     document.body.appendChild(badge);
 })();
+function renderReadingTime(article) 
+{
+    if (!article) {
+        console.warn("No article element found to calculate reading time.");
+        return;
+    }
+    const text = article.textContent;
+    const wordsMatchRegExp = /[^\s]+/g;
+    const words = text.matchAll(wordsMatchRegExp);
+    const wordCount = [...words].length;
+    const readingTime = Math.ceil(wordCount / 200); // Assuming average reading speed of 200 words per minute
+    const badge = document.createElement("p");
+    badge.classList.add("color-secondary-text", "type--caption");
+    badge.textContent = `Reading time: ${readingTime} min`;
+
+    const heading = article.querySelector("h1");
+    const dateElement = article.querySelector("time");
+    (dateElement ?? heading)?.insertAdjacentElement("afterend", badge);
+}
+renderReadingTime(document.querySelector('article'));
