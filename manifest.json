@@ -4,7 +4,7 @@
     "version": "1.0",
     "manifest_version": 3,
     "author": "Spiral-cloud",
-    "permissions": ["activeTab", "scripting"],
+    "permissions": ["activeTab", "scripting", "tabGroups"],
     "action": {
         "default_icon":
         {
@@ -12,8 +12,11 @@
             "32": "images/icon-32.png",
             "48": "images/icon-48.png",
             "128": "images/icon-128.png"
-        }
+        },
+        "default_popup": "hello.html"
+        
     },
+    "host_permissions":["https://developer.chrome.com/*"],
     "commands":
     {
         "_execute_action":
