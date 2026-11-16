@@ -11,13 +11,13 @@ chrome.action.onClicked.addListener(async (tab) => {
     return;
   }
 
-  const isAllowedPage =
+  /*const isAllowedPage =
     tab.url.startsWith(extensions) ||
     tab.url.startsWith(webstore);
 
   if (!isAllowedPage) {
     return;
-  }
+  }*/
 
   const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
   const nextState = prevState === "ON" ? "OFF" : "ON";
