@@ -4,7 +4,7 @@
     "version": "1.0",
     "manifest_version": 3,
     "author": "Spiral-cloud",
-    "permissions": ["activeTab", "scripting", "tabGroups"],
+    "permissions": ["activeTab", "scripting", "tabs", "tabGroups"],
     "action": {
         "default_icon":
         {
